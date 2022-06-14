@@ -4,29 +4,31 @@
 using namespace std;
 int main(){
 	setlocale (LC_ALL,"Portuguese");
-	int matriz [4] [4],maior,maior_c,maior_l;
-	
-	for (int i=0;i<4;i++){
-		cout<<"Insira o valor da "<<i+1<<"º coluna"<<endl;
-		cin>>matriz[0][i];
-	}
-	for (int i=0;i<4;i++){
-		cout<<"Insira o valor da "<<i+1<<"º linha"<<endl;
-		cin>>matriz[i][0];
-	}
-	cout<<"========================="<<endl;
-	  for(int i=0;i<4;i++){
-        for(int j=i+1;j<4;j++){
-		cout<<matriz[i][j]<<endl;
+	int matriz [10] [10] ={ 
+	{1,2,3,4,5,6,7,8,9,10},
+	{11,12,13,14,15,16,17,18,19,20},
+	{21,22,23,24,25,26,27,28,29,30},
+	{31,32,33,34,35,36,37,38,39,40},
+	{41,42,43,44,45,46,47,48,49,50},
+	{51,52,53,54,55,56,57,58,59,60},
+	{61,62,63,64,65,66,67,68,69,70},
+	{71,72,73,74,75,76,77,78,79,80},
+	{81,82,83,84,85,86,87,88,89,90},
+	{91,92,93,94,95,96,97,98,99,100},
+	},maior=0,maior_c,maior_l;
+
+	  for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+	cout<<matriz[i][j]<<"|";
            if(matriz[i][j]>maior){
             maior=matriz[i][j];
-            maior_c=j;
-            maior_l=i;
+            maior_c=j+1;
+            maior_l=i+1;
            }
         }
     }
 
-	cout<<"O maior número da matriz está na coluna "<<maior_c<<" e a na linha "<<maior_l<<endl;
+	cout<<endl<<"O maior nÃºmero da matriz estÃ¡ na coluna "<<maior_c<<" e a na linha "<<maior_l<<endl;
 	
 
 
